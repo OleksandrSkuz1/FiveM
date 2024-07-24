@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Hide the default menu */
+    width: 300px;
+    height: 300px;
+}
+
+#menu.open {
+    display: block; /* Show the menu when open */
+}
+
+.menu-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.category {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #f00;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    transition: background 0.3s;
+}
+
+.category.selected {
+    background: #0f0; /* Change to your desired highlight color */
+}
+
+/* Positioning the categories in a circular manner */
+.category:nth-child(1) {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.category:nth-child(2) {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.category:nth-child(3) {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.category:nth-child(4) {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.category:nth-child(5) {
+    top: 25%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.category:nth-child(6) {
+    top: 25%;
+    right: 25%;
+    transform: translate(50%, -50%);
+}
+
+/* Add styles for the animation selection menu */
+#animation-selection-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#animation-selection-menu.open {
+    display: block;
+}
+
+#animation-selection-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#animation-selection-menu li {
+    color: white;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+#animation-selection-menu li:hover {
+    text-decoration: underline;
+}
+
+/* Add styles for the quick access animations */
+#quick-access-animations {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#quick-access-animations .animation {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#quick-access-animations .animation:hover {
+    background: rgba(0, 255, 0, 0.8);
+}
+
